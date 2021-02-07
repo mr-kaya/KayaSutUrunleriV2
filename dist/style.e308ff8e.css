@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300&display=swap');
+
+* {
+  box-sizing: border-box;
+  --bgcolor: white;
+  --color: black;
+}
+
+body {
+  background-color: #181A1B;
+  color:#F3F3EB;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.big-image {
+  height: 75vh;
+  width: 100vw;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 75% 50%;
+  background-image: url('/bien2.b37501c7.jpg');
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.overlay h1 {
+  font-size: 65px;
+  letter-spacing: 2px;
+  margin: 0 0 5px;
+  text-shadow:rgb(220, 176, 0) 1px 0 15px;
+}
+
+.overlay p {
+  margin: 0;
+  font-size: 26px;
+}
+
+.brandImage {
+  background-image: url("/LogoBlack.1bdabf5d.png");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  background-size: 12rem;
+  background-position: 90% 90%;
+
+}
+
+.motto {
+  font-family: 'Bitter', serif;
+  text-align: center;
+  margin: 60px auto;
+  max-width: 800px;
+}
+
+.urunler {
+  font-family: 'Bitter', serif;
+  text-align: center;
+  margin: 70px auto;
+  max-width: 1000px;
+}
+
+.baslik_sol {
+  height: auto;
+  width: 15%;
+}
+
+.baslik_sag {
+  transform: scaleX(-1);
+  height: auto;
+  width: 15%;
+}
+
+.ana-urun {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  
+}
+
+.ana-urun-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #181A1B;
+  perspective: 1000px;
+}
+
+.ana-urun-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.ana-urun-card:hover .ana-urun-card-inner {
+  transform: rotateY(180deg);
+}
+
+.ana-urun-card-front, .ana-urun-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.ana-urun-card-front {
+  background-color: #323D51;
+  color: white;
+  border-radius: 1rem;
+}
+
+.ana-urun-card-back {
+  background-color: #323D51;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 1rem;
+}
+
+.card-background {
+  background-image: url("/chartBackground.b9e91a20.png");
+  background-size: 100%;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 60px;
+}
+
+#vids {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+#vids a:first-of-type {
+  margin-bottom: 5px;
+}
+
+/**
+* Navigation
+*/
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  transition: all linear .5s .1s;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--bgcolor);
+  color: var(--color);
+}
+
+span {
+    align-items: center;
+    font-weight: bolder;
+    font-size: 36px;
+    margin-left: 10px;
+}
+
+nav img {
+  height: 10vw;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/**
+* Scrolling CSS
+*/
+nav.scroll {
+  padding: 5px;
+  background: black;
+  opacity: 0.8;
+  position: fixed;
+}
+
+nav.scroll span {
+  font-size: 18px;
+  color: white;
+}
+
+nav.scroll img {
+  height: 5vw;
+}
+
+nav.scroll li {
+  color: white;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
